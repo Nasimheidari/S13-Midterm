@@ -1,16 +1,98 @@
-:root{
-    --green-bg-gradient: linear-gradient(110.6deg, #2A4032 0.81%, #3A5E46 100%);
-    --gray-bg-color: #E9E9E9;
-    --green-bg-color: #3B5F47;
-    --gray-color: #C5C2CA;
-    --yellow-color: #FDDE67;
+:root {
+  --green-bg-gradient: linear-gradient(110.6deg, #2a4032 0.81%, #3a5e46 100%);
+  --gray-bg-color: #e9e9e9;
+  --green-bg-color: #3b5f47;
+  --gray-color: #c5c2ca;
+  --yellow-color: #fdde67;
+  --white-color: #ffffff;
+  --white-color-opacity30: #ffffff4d;
+  --white-color-opacity80: #ffffffcc;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: "lato";
+body {
+  font-family: "lato";
+}
+
+.intro {
+  background: var(--green-bg-gradient);
+  position: relative;
+}
+
+.edition {
+  font-weight: 400;
+  font-style: italic;
+  text-align: left;
+  color: var(--white-color-opacity30);
+}
+h1 {
+  font-weight: 900;
+  color: var(--white-color);
+}
+.intro span {
+  color: var(--white-color-opacity80);
+  font-weight: 400;
+}
+.intro button {
+  width: 180px;
+  padding: 16px 38px;
+  border-radius: 6px;
+  border-style: none;
+  background-color: var(--yellow-color);
+  margin-left: 15px;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  color: #181818;
+
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px;
+  }
+  h1 {
+    font-size: 60px;
+    margin: 12px 15px;
+  }
+  .edition {
+    line-height: 36px;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  .intro {
+    background: var(--green-bg-gradient);
+    position: relative;
+    width: 100%;
+    padding-bottom: 657px;
+  }
+  .intro span {
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .main {
+    position: absolute;
+    top: 27px;
+    z-index: 2;
+  }
+  .hero {
+    position: absolute;
+    top: 266px;
+    right: 75.96px;
+    left: 75.96px;
+    z-index: 1;
+  }
+  .hero img {
+    display: block;
+  }
 }
