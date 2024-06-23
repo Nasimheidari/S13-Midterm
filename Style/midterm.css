@@ -38,19 +38,42 @@ h1 {
   color: var(--white-color-opacity80);
   font-weight: 400;
 }
-.intro button {
-  width: 180px;
-  padding: 16px 38px;
+.intro button,
+.jacket button,
+.sunglasses button {
+  position: absolute;
+  padding: 16px 40px;
   border-radius: 6px;
   border-style: none;
-  background-color: var(--yellow-color);
-  margin-left: 15px;
-  margin-top: 24px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16.8px;
   text-align: left;
+}
+
+.intro button {
+  background-color: var(--yellow-color);
+  position: absolute;
+  left: 15px;
+  top: 206px;
   color: #181818;
+}
+.jacket button,
+.sunglasses button {
+  background-color: #181818;
+  color: var(--white-color);
+}
+.jacket h3,
+.sunglasses h3 {
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+}
+.sunglasses span {
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  position: absolute;
 }
 
 @media screen and (max-width: 576px) {
@@ -75,7 +98,7 @@ h1 {
     width: 100%;
     padding-bottom: 640px;
   }
-   
+
   .intro::before,
   .intro::after {
     content: "";
@@ -85,7 +108,7 @@ h1 {
     border-radius: 50%;
     position: absolute;
   }
-  .intro::before{
+  .intro::before {
     bottom: 149.06px;
     right: 27.22px;
   }
@@ -115,20 +138,98 @@ h1 {
   .hero img {
     display: block;
   }
-  .nav {
-    width: 100%;
+  /* .nav {
+    position: fixed;
+    z-index: 2;
+  } */
+  .nav ul {
+    min-width: 360px;
     background-color: var(--yellow-color);
     padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
+    list-style: none;
     position: absolute;
     top: 592px;
-    z-index: 2;
     box-shadow: 0px 0px 4px 0px #00000040;
+    display: flex;
+    justify-content: space-between;
   }
+
   .nav img {
     display: block;
     max-width: 24px;
     max-height: 24px;
+  }
+
+  .brands ul {
+    padding: 12px 15px;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+  }
+  .collection {
+    padding: 32px 15px;
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 32px;
+  }
+  .jacket,
+  .sunglasses {
+    position: relative;
+    max-width: 360px;
+    border-radius: 24px;
+  }
+  .jacket {
+    background-color: var(--gray-color);
+    padding-bottom: 412px;
+  }
+  .sunglasses {
+    margin-top: 32px;
+    background-color: var(--yellow-color);
+    padding-bottom: 248px;
+  }
+  .jacket img,
+  .sunglasses img {
+    display: block;
+    position: absolute;
+  }
+  .jacket img {
+    top: 71.87px;
+    left: 66.36px;
+    right: 66.36px;
+  }
+  .sunglasses img {
+    top: 29.75px;
+    left: 0;
+  }
+  .jacket h3,
+  .sunglasses h3 {
+    position: absolute;
+    font-size: 18px;
+    line-height: 18px;
+    left: 18px;
+  }
+  .jacket h3 {
+    top: 20.33px;
+  }
+  .sunglasses h3 {
+    width: 42%;
+    top: 20.33px;
+    left: 173px;
+  }
+  .jacket button,
+  .sunglasses button {
+    bottom: 18px;
+    right: 18px;
+  }
+  .sunglasses span {
+    font-size: 24px;
+    line-height: 28.13px;
+    top: 108.8px;
+    right: 40px;
   }
 }
