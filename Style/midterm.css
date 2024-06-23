@@ -1,0 +1,16 @@
+:root{
+    --green-bg-gradient: linear-gradient(110.6deg, #2A4032 0.81%, #3A5E46 100%);
+    --gray-bg-color: #E9E9E9;
+    --green-bg-color: #3B5F47;
+    --gray-color: #C5C2CA;
+    --yellow-color: #FDDE67;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "lato";
+}
