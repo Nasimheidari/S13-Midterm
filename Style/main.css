@@ -18,6 +18,10 @@
 body {
   font-family: "lato";
 }
+ .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
 .intro {
   background: var(--green-bg-gradient);
@@ -82,7 +86,7 @@ h1 {
 .bestsellers ul {
   display: flex;
 }
-.bestsellers li{
+.bestsellers li {
   margin-right: 35px;
 }
 .items {
@@ -91,36 +95,53 @@ h1 {
   background-color: var(--white-color);
   border-radius: 24px;
 }
-.items img:nth-of-type(1) {
-  width: 24.01px;
-  height: 21.1px;
+.checkbox {
   margin-left: auto;
   margin-right: 16px;
   margin-top: 16px;
+  cursor: pointer;
 }
+.checkbox input {
+  display: none;
+}
+
+.favorite {
+  transition: fill 0.3s ease;
+}
+
+.checkbox svg{
+  fill: transparent;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.checkbox input:checked ~ svg {
+  fill: black;
+
+}
+
 .desc span {
   font-family: "Roboto";
   font-weight: 300;
   text-align: left;
 }
-.cart{
+.cart {
   background-color: var(--yellow-color);
   border-style: none;
   border-radius: 6px;
-  }
-.cart img{
+}
+.cart img {
   width: 16px;
   height: 16px;
   align-self: center;
 }
-
+.crossed {
+  text-decoration: line-through;
+  color: #00000033;
+}
 
 @media screen and (max-width: 576px) {
-  .container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 360px;
-  }
+ 
   h1 {
     font-size: 60px;
     margin: 12px 15px;
@@ -177,23 +198,22 @@ h1 {
   .hero img {
     display: block;
   }
-  /* .nav {
+  .nav-xs {
     position: fixed;
-    z-index: 2;
-  } */
-  .nav ul {
-    min-width: 360px;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
     background-color: var(--yellow-color);
+  }
+  .nav-xs ul {
     padding: 12px 15px;
     list-style: none;
-    position: absolute;
-    top: 592px;
     box-shadow: 0px 0px 4px 0px #00000040;
     display: flex;
     justify-content: space-between;
   }
 
-  .nav img {
+  .nav-xs img {
     display: block;
     max-width: 24px;
     max-height: 24px;
@@ -272,8 +292,14 @@ h1 {
     top: 108.8px;
     right: 40px;
   }
+  .bestsellers {
+    overflow-x: scroll;
+  }
+  /* .items{
+    padding-bottom: 40.32px;
+  } */
 
-  .items img:nth-of-type(2) {
+  .items img:nth-of-type(1) {
     width: 132.99px;
     height: 148.36px;
     display: block;
@@ -296,8 +322,10 @@ h1 {
     font-size: 14px;
     line-height: 16.41px;
   }
-  .cart img{
+  .cart img {
     margin: 7px;
   }
-
+  .crossed {
+    margin-right: 6px;
+  }
 }
