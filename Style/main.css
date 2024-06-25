@@ -2,10 +2,13 @@
   --green-bg-gradient: linear-gradient(110.6deg, #2a4032 0.81%, #3a5e46 100%);
   --gray-bg-color: #e9e9e9;
   --green-bg-color: #3b5f47;
+  --green-tag-bg: #3a5e46;
   --green-circle-color: #1b2d22;
   --gray-color: #c5c2ca;
   --yellow-color: #fdde67;
   --white-color: #ffffff;
+  --dark-gray-color: #181818;
+  --black-color: #000000;
   --white-color-opacity30: #ffffff4d;
   --white-color-opacity80: #ffffffcc;
 }
@@ -18,10 +21,10 @@
 body {
   font-family: "lato";
 }
- .container {
-    margin-right: auto;
-    margin-left: auto;
-  }
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .intro {
   background: var(--green-bg-gradient);
@@ -60,23 +63,41 @@ h1 {
   position: absolute;
   left: 15px;
   top: 206px;
-  color: #181818;
+  color: var(--dark-gray-color);
 }
+.pages input {
+  display: none;
+}
+.faker {
+  background-color: var(--white-color-opacity30);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.pages input:checked ~ .faker {
+  background-color: var(--white-color);
+  width: 18px;
+  height: 18px;
+  transform: translateY(-2px);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
 .jacket button,
 .sunglasses button {
-  background-color: #181818;
+  background-color: var(--dark-gray-color);
   color: var(--white-color);
 }
-.jacket h3,
-.sunglasses h3 {
+.jacket h4,
+.sunglasses h4 {
   font-weight: 700;
   text-align: center;
-  color: #000000;
+  color: var(--black-color);
 }
 .sunglasses span {
   font-weight: 700;
   text-align: center;
-  color: #000000;
+  color: var(--black-color);
   position: absolute;
 }
 .bestsellers {
@@ -94,30 +115,44 @@ h1 {
   flex-direction: column;
   background-color: var(--white-color);
   border-radius: 24px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.sale {
+  width: 41px;
+  height: 20px;
+  padding: 3px 6px 3px 6px;
+  border-radius: 6px;
+  background-color: var(--green-tag-bg);
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14.06px;
+  text-align: center;
+  color: var(--white-color);
+}
+.placement{
+  display: flex;
+  justify-content: space-between;
 }
 .checkbox {
   margin-left: auto;
-  margin-right: 16px;
-  margin-top: 16px;
   cursor: pointer;
 }
 .checkbox input {
   display: none;
 }
 
-.favorite {
-  transition: fill 0.3s ease;
-}
-
-.checkbox svg{
+.checkbox svg {
   fill: transparent;
-  stroke: black;
-  stroke-width: 2px;
+  stroke: var(--black-color);
+  stroke-width: 1.5px;
 }
 
 .checkbox input:checked ~ svg {
-  fill: black;
-
+  fill: var(--black-color);
+  transition: 0.3s;
 }
 
 .desc span {
@@ -141,7 +176,6 @@ h1 {
 }
 
 @media screen and (max-width: 576px) {
- 
   h1 {
     font-size: 60px;
     margin: 12px 15px;
@@ -221,7 +255,7 @@ h1 {
 
   .brands ul {
     padding: 12px 15px;
-    background-color: #181818;
+    background-color: var(--dark-gray-color);
     display: flex;
     justify-content: space-between;
   }
@@ -229,18 +263,18 @@ h1 {
   .bestsellers {
     padding: 32px 15px;
   }
-  h2 {
+  h3 {
     font-size: 32px;
     font-weight: 400;
     line-height: 32px;
     text-align: left;
-    color: #000000;
+    color: var(--black-color);
     margin-bottom: 32px;
   }
   .jacket,
   .sunglasses {
     position: relative;
-    max-width: 360px;
+    /* max-width: 360px; */
     border-radius: 24px;
   }
   .jacket {
@@ -266,17 +300,17 @@ h1 {
     top: 29.75px;
     left: 0;
   }
-  .jacket h3,
-  .sunglasses h3 {
+  .jacket h4,
+  .sunglasses h4 {
     position: absolute;
     font-size: 18px;
     line-height: 18px;
     left: 18px;
   }
-  .jacket h3 {
+  .jacket h4 {
     top: 20.33px;
   }
-  .sunglasses h3 {
+  .sunglasses h4 {
     width: 42%;
     top: 20.33px;
     left: 173px;
@@ -295,9 +329,6 @@ h1 {
   .bestsellers {
     overflow-x: scroll;
   }
-  /* .items{
-    padding-bottom: 40.32px;
-  } */
 
   .items img:nth-of-type(1) {
     width: 132.99px;
@@ -311,7 +342,7 @@ h1 {
     margin-top: 16px;
   }
 
-  h4 {
+  h5 {
     font-family: "Roboto";
     font-size: 16px;
     font-weight: 500;
@@ -325,7 +356,59 @@ h1 {
   .cart img {
     margin: 7px;
   }
-  .crossed {
-    margin-right: 6px;
+  footer {
+    background-color: var(--green-bg-color);
+    padding: 32px 15px 84px 15px;
+  }
+  footer span:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    color: var(--white-color);
+    width: 54px;
+    height: 56px;
+    padding: 12px 0px 12px 0px;
+    border-radius: 8px;
+    background-color: #18181840;
+  }
+  footer span:nth-of-type(2) {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14.06px;
+    text-align: left;
+    color: var(--white-color);
+    margin: 12px auto 0 auto;
+  }
+  .countdown {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 39px;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 32px;
+  }
+  .pages {
+    display: flex;
+    gap: 16px;
+    position: absolute;
+    bottom: 66.98px;
+    right: 141px;
+    left: 141px;
+    z-index: 3;
   }
 }
