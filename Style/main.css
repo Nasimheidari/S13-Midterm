@@ -48,7 +48,6 @@ h1 {
 .intro button,
 .jacket button,
 .sunglasses button {
-  position: absolute;
   padding: 16px 40px;
   border-radius: 6px;
   border-style: none;
@@ -60,25 +59,24 @@ h1 {
 
 .intro button {
   background-color: var(--yellow-color);
-  position: absolute;
   left: 15px;
   top: 206px;
   color: var(--dark-gray-color);
+}
+.pages {
+  display: flex;
+  position: absolute;
+  z-index: 3;
 }
 .pages input {
   display: none;
 }
 .faker {
   background-color: var(--white-color-opacity30);
-  width: 14px;
-  height: 14px;
   border-radius: 50%;
 }
 .pages input:checked ~ .faker {
   background-color: var(--white-color);
-  width: 18px;
-  height: 18px;
-  transform: translateY(-2px);
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -132,7 +130,7 @@ h1 {
   text-align: center;
   color: var(--white-color);
 }
-.placement{
+.placement {
   display: flex;
   justify-content: space-between;
 }
@@ -174,8 +172,143 @@ h1 {
   text-decoration: line-through;
   color: #00000033;
 }
+@media screen and (min-width: 1540px) {
+  .nav-xs {
+    display: none;
+  }
+
+  .container {
+    max-width: 1540px;
+  }
+  .nav-xxl {
+    position: absolute;
+    top: 25px;
+    left: 110px;
+    right: 110px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-xxl .name {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+    /* color: var(--white-color); */
+  }
+  .nav-xxl ul {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-xxl li {
+    margin-right: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white-color-opacity30);
+  }
+  .nav-xxl li:first-of-type{
+    color: var(--white-color);
+  }
+  .nav-xxl img{
+    width: 16px;
+    height: 16px;
+    display: block;
+  
+  }
+  .nav-xxl div:last-of-type{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    padding: 12px;
+  }
+  h1 {
+    font-size: 112px;
+    font-weight: 900;
+    line-height: 100px;
+    margin: 24px 0;
+  }
+  .edition {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .intro {
+    display: flex;
+    padding-right: 110px;
+    padding-left: 110px;
+    padding-bottom: 748px;
+  }
+  .intro span {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    margin-top: 24px;
+  }
+  .intro button {
+    margin-top: 49px;
+    width: fit-content;
+  }
+  .intro::before,
+  .intro::after {
+    content: "";
+    background: var(--green-circle-color);
+    width: 308.6px;
+    height: 308.6px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .intro::before {
+    bottom: 255.33px;
+    right: 244.25px;
+  }
+  .intro::after {
+    bottom: 77.55px;
+    right: 415.67px;
+  }
+  .main {
+    width: calc(100% / 12 * 4);
+    position: absolute;
+    top: 150.13px;
+    bottom: 150.13px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .hero img {
+    width: 342.16px;
+    height: 619.63px;
+    position: absolute;
+    top: 128.63px;
+    bottom: 0;
+    right: 320.83px;
+    z-index: 2;
+  }
+  .pages {
+    gap: 21px;
+    top: 326.63px;
+    right: 110px;
+    flex-direction: column;
+  }
+  .faker {
+    width: 16px;
+    height: 16px;
+  }
+  .pages input:checked ~ .faker {
+    width: 21px;
+    height: 21px;
+    transform: translatex(-2px);
+  }
+}
 
 @media screen and (max-width: 576px) {
+  .nav-xxl {
+    display: none;
+  }
   h1 {
     font-size: 60px;
     margin: 12px 15px;
@@ -187,8 +320,7 @@ h1 {
     margin-left: 15px;
   }
   .intro {
-    background: var(--green-bg-gradient);
-    position: relative;
+    /* position: relative; */
     width: 100%;
     padding-bottom: 640px;
   }
@@ -215,6 +347,15 @@ h1 {
     line-height: 21.6px;
     text-align: left;
     margin-left: 15px;
+  }
+  .intro button,
+  .jacket button,
+  .sunglasses button {
+    position: absolute;
+  }
+  .intro button {
+    left: 15px;
+    top: 206px;
   }
   .main {
     position: absolute;
@@ -403,12 +544,18 @@ h1 {
     margin-bottom: 32px;
   }
   .pages {
-    display: flex;
     gap: 16px;
-    position: absolute;
     bottom: 66.98px;
     right: 141px;
     left: 141px;
-    z-index: 3;
+  }
+  .faker {
+    width: 14px;
+    height: 14px;
+  }
+  .pages input:checked ~ .faker {
+    width: 18px;
+    height: 18px;
+    transform: translateY(-2px);
   }
 }
