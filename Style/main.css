@@ -83,7 +83,6 @@ h1 {
 .jacket,
 .sunglasses {
   position: relative;
-  /* max-width: 360px; */
   border-radius: 24px;
 }
 .jacket {
@@ -122,7 +121,6 @@ h3 {
 }
 .bestsellers {
   background-color: var(--gray-bg-color);
-
 }
 .bestsellers ul {
   display: flex;
@@ -150,6 +148,7 @@ h3 {
   line-height: 14.06px;
   text-align: center;
   color: var(--white-color);
+  z-index: 3;
 }
 .placement {
   display: flex;
@@ -197,6 +196,9 @@ h5 {
 .crossed {
   text-decoration: line-through;
   color: #00000033;
+}
+footer {
+  background-color: var(--green-bg-color);
 }
 @media screen and (min-width: 1540px) {
   .nav-xs {
@@ -338,7 +340,7 @@ h5 {
   .bestsellers {
     padding: 70px 110px;
   }
-  .bestsellers{
+  .bestsellers {
     display: flex;
     flex-direction: column;
   }
@@ -427,9 +429,77 @@ h5 {
     font-weight: 400;
     line-height: 16.8px;
     border-style: none;
-  margin-top: 70px;
-  margin-right: auto;
-  margin-left: auto;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  footer {
+    position: relative;
+    padding: 78px 110px;
+    border-left: 500px solid var(--yellow-color);
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .shoes {
+    position: absolute;
+    top: 78px;
+    left: -390px;
+    bottom: 0;
+  }
+  .shoes div:first-of-type {
+    margin-bottom: 32px;
+    font-family: "Roboto";
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    color: var(--black-color);
+  }
+  .off{
+    margin-left: 62px;
+  }
+  .label span:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    color: var(--white-color);
+    width: 153px;
+    height: 112px;
+    padding: 32px 58.25px;
+    border-radius: 8px;
+    background-color: #18181840;
+  }
+  .label span:nth-of-type(2) {
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+    text-align: left;
+    color: var(--white-color);
+    margin: 12px auto 0 auto;
+  }
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+    color: var(--white-color);
+    margin-bottom: 93.47px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -437,6 +507,9 @@ h5 {
     display: none;
   }
   .loadmore {
+    display: none;
+  }
+  .shoes {
     display: none;
   }
   h1 {
@@ -450,7 +523,6 @@ h5 {
     margin-left: 15px;
   }
   .intro {
-    /* position: relative; */
     width: 100%;
     padding-bottom: 640px;
   }
@@ -544,10 +616,6 @@ h5 {
     line-height: 32px;
     margin-bottom: 32px;
   }
-  .jacket,
-  .sunglasses {
-    /* max-width: 360px; */
-  }
   .jacket {
     padding-bottom: 412px;
   }
@@ -619,10 +687,9 @@ h5 {
     align-self: center;
   }
   footer {
-    background-color: var(--green-bg-color);
     padding: 32px 15px 84px 15px;
   }
-  footer span:nth-of-type(1) {
+  .label span:nth-of-type(1) {
     display: flex;
     justify-content: center;
     font-family: "Roboto";
@@ -637,7 +704,7 @@ h5 {
     border-radius: 8px;
     background-color: #18181840;
   }
-  footer span:nth-of-type(2) {
+  .label span:nth-of-type(2) {
     font-family: "Roboto";
     font-size: 12px;
     font-weight: 300;
