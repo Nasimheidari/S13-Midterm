@@ -11,6 +11,7 @@
   --black-color: #000000;
   --white-color-opacity30: #ffffff4d;
   --white-color-opacity80: #ffffffcc;
+  --light-yellow-color: #ffeb9d;
 }
 
 * {
@@ -55,13 +56,21 @@ h1 {
   font-weight: 400;
   line-height: 16.8px;
   text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
 .intro button {
   background-color: var(--yellow-color);
   left: 15px;
   top: 206px;
   color: var(--dark-gray-color);
+}
+.intro button:hover {
+  background-color: var(--light-yellow-color);
+}
+.jacket button:hover,
+.sunglasses button:hover {
+  background-color: transparent;
 }
 .pages {
   display: flex;
@@ -124,6 +133,7 @@ h3 {
 }
 .bestsellers ul {
   display: flex;
+  justify-content: space-between;
 }
 .bestsellers li {
   margin-right: 35px;
@@ -206,7 +216,7 @@ footer {
   }
 
   .container {
-    max-width: 1540px;
+    min-width: 1320px;
   }
   .nav-xxl {
     position: absolute;
@@ -237,6 +247,9 @@ footer {
     line-height: 40px;
     text-align: center;
     color: var(--white-color-opacity30);
+  }
+  .nav-xxl li:hover {
+    color: var(--white-color-opacity80);
   }
   .nav-xxl li:first-of-type {
     color: var(--white-color);
@@ -291,11 +304,11 @@ footer {
   }
   .intro::before {
     bottom: 255.33px;
-    right: 244.25px;
+    left: 987.15px;
   }
   .intro::after {
     bottom: 77.55px;
-    right: 415.67px;
+    left: 806.25px;
   }
   .main {
     width: calc(100% / 12 * 4);
@@ -308,12 +321,37 @@ footer {
   }
   .hero img {
     width: 342.16px;
-    height: 619.63px;
     position: absolute;
-    top: 128.63px;
+    left: 877px;
     bottom: 0;
-    right: 320.83px;
     z-index: 2;
+  }
+  .price {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43.2px;
+    text-align: center;
+    color: var(--white-color);
+    position: absolute;
+    top: 207.63px;
+    left: 815.04px;
+  }
+  .discount {
+    width: 110px;
+    height: 110px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    font-family: "Roboto";
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30.47px;
+    text-align: center;
+    color: var(--dark-gray-color);
+    position: absolute;
+    top: 242.63px;
+    left: 877.15px;
+    z-index: 4;
   }
   .pages {
     gap: 21px;
@@ -335,6 +373,13 @@ footer {
     background-color: var(--dark-gray-color);
     display: flex;
     justify-content: space-between;
+  }
+  .arrow {
+    position: absolute;
+    bottom: 32px;
+    left: 827px;
+    display: flex;
+    gap: 12px;
   }
   .collection,
   .bestsellers {
@@ -421,7 +466,7 @@ footer {
   .loadmore {
     width: 207px;
     height: 49px;
-    padding: 16px 40px;
+    padding: 15px 39px;
     border-radius: 6px;
     background-color: var(--dark-gray-color);
     color: var(--white-color);
@@ -432,6 +477,13 @@ footer {
     margin-top: 70px;
     margin-right: auto;
     margin-left: auto;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .loadmore:hover {
+    background-color: transparent;
+    color: var(--dark-gray-color);
+    border: 1px solid black;
   }
   footer {
     position: relative;
@@ -439,7 +491,6 @@ footer {
     border-left: 500px solid var(--yellow-color);
     display: flex;
     justify-content: space-between;
-  
   }
   .shoes {
     position: absolute;
@@ -456,8 +507,9 @@ footer {
     text-align: left;
     color: var(--black-color);
   }
-  .off{
+  .off {
     margin-left: 62px;
+    width: 90%;
   }
   .label span:nth-of-type(1) {
     display: flex;
@@ -503,6 +555,15 @@ footer {
   }
 }
 @media screen and (max-width: 576px) {
+  .discount {
+    display: none;
+  }
+  .price {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
   .nav-xxl {
     display: none;
   }
@@ -538,7 +599,7 @@ footer {
   }
   .intro::before {
     bottom: 149.06px;
-    right: 27.22px;
+    left: 140.15px;
   }
   .intro::after {
     bottom: 82.4px;
