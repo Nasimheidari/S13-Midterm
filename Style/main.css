@@ -210,7 +210,7 @@ h5 {
 footer {
   background-color: var(--green-bg-color);
 }
-@media screen and (min-width: 1540px) {
+@media screen and (min-width: 1541px) {
   .nav-xs {
     display: none;
   }
@@ -347,6 +347,8 @@ footer {
     font-weight: 700;
     line-height: 30.47px;
     text-align: center;
+    display: flex;
+    align-items: center;
     color: var(--dark-gray-color);
     position: absolute;
     top: 242.63px;
@@ -552,6 +554,585 @@ footer {
     text-align: left;
     color: var(--white-color);
     margin-bottom: 93.47px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1540px) {
+  .discount {
+    display: none;
+  }
+  .price {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .nav-xs {
+    display: none;
+  }
+  .loadmore {
+    display: none;
+  }
+  .shoes {
+    display: none;
+  }
+  .container {
+    min-width: 720px;
+  }
+  .nav-xxl {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+  .nav-xxl .name {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    color: var(--white-color);
+  }
+  .nav-xxl ul {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-xxl li {
+    margin-right: 32px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white-color-opacity30);
+  }
+  .nav-xxl li:hover {
+    color: var(--white-color-opacity80);
+  }
+  .nav-xxl li:first-of-type {
+    color: var(--white-color);
+  }
+  .nav-xxl img {
+    width: 14px;
+    height: 14px;
+    display: block;
+  }
+  .nav-xxl div:last-of-type {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    padding: 8px;
+  }
+  h1 {
+    font-size:75px;
+    margin: 12px 15px;
+    line-height: 80px;
+  }
+  .edition {
+    line-height: 32px;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  .intro {
+    padding-right: 50px;
+    padding-left: 50px;
+    width: 100%;
+    padding-bottom: 560px;
+  }
+
+  .intro::before,
+  .intro::after {
+    content: "";
+    background: var(--green-circle-color);
+    width: 192.63px;
+    height: 192.63px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .intro::before {
+    bottom: 149.06px;
+    left: 484px;
+  }
+  .intro::after {
+    bottom: 82.4px;
+    left: 371px;
+  }
+  .intro span {
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .intro button,
+  .jacket button,
+  .sunglasses button {
+    position: absolute;
+  }
+  .intro button {
+    left: 15px;
+    top: 260px;
+  }
+  .main {
+    position: absolute;
+    top: 100px;
+    z-index: 2; 
+  }
+  .hero {
+    position: absolute;
+    bottom: 0;
+    left: 420px;
+    z-index: 1;
+  }
+  .hero img {
+    display: block;
+  }
+  .brands ul {
+    padding: 14px 18px;
+    background-color: var(--dark-gray-color);
+    display: flex;
+    justify-content: space-between;
+  }
+  .brands img {
+    display: block;
+    height: 18px;
+  }
+  .collection,
+  .bestsellers {
+    padding: 70px 50px;
+  }
+  .bestsellers {
+    display: flex;
+    flex-direction: column;
+  }
+  .components {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .jacket {
+    width: 50%;
+  }
+  .sunglasses {
+    width: 50%;
+  }
+  .sunglasses,
+  .jacket {
+    padding-bottom: 550.75px;
+  }
+  h3 {
+    font-size: 48px;
+    margin-bottom: 70px;
+  }
+  .jacket img {
+    left: 60px;
+    bottom: 0;
+    width: 220px;
+  }
+  .sunglasses img {
+    bottom: 0;
+    left: 0;
+    width: 340px;
+  }
+  .jacket h4,
+  .sunglasses h4 {
+    position: absolute;
+    font-size: 24px;
+    line-height: 40px;
+  }
+  .jacket h4 {
+    top: 24px;
+    left: 25px;
+  }
+  .sunglasses h4 {
+    top: 24px;
+    right: 98.5px;
+  }
+  .jacket button,
+  .sunglasses button {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+  }
+  .sunglasses span {
+    font-size: 42px;
+    top: 110px;
+    right:50px;
+  }
+  .bestsellers {
+    overflow-x: scroll;
+  }
+
+  .items img {
+    width: 132.99px;
+    height: 148.36px;
+    display: block;
+    margin: -8.68px 35.25px 24.32px 27.5px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+  .desc span {
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .cart img {
+    margin: 7px;
+    width: 16px;
+    height: 16px;
+    align-self: center;
+  }
+  footer {
+    padding: 32px 50px 84px 50px;
+  }
+  .label span:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    color: var(--white-color);
+    width: 62px;
+    height: 64px;
+    padding: 16px 0px 16px 0px;
+    border-radius: 8px;
+    background-color: #18181840;
+  }
+  .label span:nth-of-type(2) {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 15px;
+    text-align: left;
+    color: var(--white-color);
+    margin: 12px auto 0 auto;
+  }
+  .countdown {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 39px;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 32px;
+  }
+  .pages {
+    gap: 16px;
+    bottom: 66.98px;
+    right: 141px;
+    left: 141px;
+  }
+  .faker {
+    width: 14px;
+    height: 14px;
+  }
+  .pages input:checked ~ .faker {
+    width: 18px;
+    height: 18px;
+    transform: translateY(-2px);
+  }
+}
+ 
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .discount {
+    display: none;
+  }
+  .price {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .nav-xs {
+    display: none;
+  }
+  .loadmore {
+    display: none;
+  }
+  .shoes {
+    display: none;
+  }
+  .container {
+    min-width: 540px;
+  }
+  .nav-xxl {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-xxl .name {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    color: var(--white-color);
+  }
+  .nav-xxl ul {
+    top: 0;
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-xxl li {
+    margin-right: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    color: var(--white-color-opacity30);
+  }
+  .nav-xxl li:hover {
+    color: var(--white-color-opacity80);
+  }
+  .nav-xxl li:first-of-type {
+    color: var(--white-color);
+  }
+  .nav-xxl img {
+    width: 14px;
+    height: 14px;
+    display: block;
+  }
+  .nav-xxl div:last-of-type {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--yellow-color);
+    padding: 8px;
+  }
+  h1 {
+    font-size:68px;
+    margin: 12px 15px;
+    line-height: 80px;
+  }
+  .edition {
+    line-height: 32px;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  .intro {
+    padding-right: 18px;
+    padding-left: 18px;
+    width: 100%;
+    padding-bottom: 560px;
+  }
+
+  .intro::before,
+  .intro::after {
+    content: "";
+    background: var(--green-circle-color);
+    width: 192.63px;
+    height: 192.63px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .intro::before {
+    bottom: 149.06px;
+    left: 384px;
+  }
+  .intro::after {
+    bottom: 82.4px;
+    left: 271px;
+  }
+  .intro span {
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: left;
+    margin-left: 15px;
+  }
+  .intro button,
+  .jacket button,
+  .sunglasses button {
+    position: absolute;
+  }
+  .intro button {
+    left: 15px;
+    top: 260px;
+  }
+  .main {
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+   
+  }
+  .hero {
+    position: absolute;
+    bottom: 0;
+    left: 320px;
+    z-index: 1;
+  }
+  .hero img {
+    display: block;
+  }
+  .brands ul {
+    padding: 14px 18px;
+    background-color: var(--dark-gray-color);
+    display: flex;
+    justify-content: space-between;
+  }
+  .brands img {
+    display: block;
+    height: 20px;
+  }
+  .collection,
+  .bestsellers {
+    padding: 32px 18px;
+    display: block;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  .jacket {
+    padding-bottom: 390px;
+  }
+  .sunglasses {
+    margin-top: 32px;
+    padding-bottom: 248px;
+  }
+  .jacket img {
+    width: 197.28px;
+    height: 340.64px;
+   bottom: 0;
+    left: 66.36px;
+    
+  }
+  .sunglasses img {
+    width: 189.66px;
+    height: 218.7px;
+    bottom: 0;
+    left: 50px;
+   
+  }
+  .jacket h4,
+  .sunglasses h4 {
+    position: absolute;
+    font-size: 24px;
+  
+  }
+  .sunglasses h4{
+    top: 35px;
+    left: 250px;
+  }
+  .jacket h4{
+    top:100px;
+    left: 290px;
+  }
+
+  .sunglasses button {
+    bottom: 18px;
+    left: 336px;
+  }
+  .jacket button{
+    bottom: 36px;
+    left: 336px;
+
+  }
+  .sunglasses span {
+    font-size: 24px;
+    line-height: 28.13px;
+    top: 120px;
+    left: 366px;
+  }
+  .bestsellers {
+    overflow-x: scroll;
+  }
+
+  .items img {
+    width: 132.99px;
+    height: 148.36px;
+    display: block;
+    margin: -8.68px 35.25px 24.32px 27.5px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 18.75px;
+  }
+  .desc span {
+    font-size: 14px;
+    line-height: 16.41px;
+  }
+  .cart img {
+    margin: 7px;
+    width: 16px;
+    height: 16px;
+    align-self: center;
+  }
+  footer {
+    padding: 32px 15px 84px 15px;
+  }
+  .label span:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: left;
+    color: var(--white-color);
+    width: 58px;
+    height: 60px;
+    padding: 16px 0px 16px 0px;
+    border-radius: 8px;
+    background-color: #18181840;
+  }
+  .label span:nth-of-type(2) {
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 15px;
+    text-align: left;
+    color: var(--white-color);
+    margin: 12px auto 0 auto;
+  }
+  .countdown {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 39px;
+  }
+  .label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--white-color);
+    margin-bottom: 32px;
+  }
+  .pages {
+    gap: 16px;
+    bottom: 66.98px;
+    right: 141px;
+    left: 141px;
+  }
+  .faker {
+    width: 14px;
+    height: 14px;
+  }
+  .pages input:checked ~ .faker {
+    width: 18px;
+    height: 18px;
+    transform: translateY(-2px);
   }
 }
 @media screen and (max-width: 576px) {
